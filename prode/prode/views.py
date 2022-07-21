@@ -1,6 +1,7 @@
 from re import template
 from django.shortcuts import render
 
+from equipos.models import Equipo
 
 def inicio(request):
     template_name="inicio.html"
@@ -8,8 +9,13 @@ def inicio(request):
         "nombre":"TAMARA",
         "apellido":"HIDAlGO"
     }
+    equipos =Equipo.objects.all()
+    print(equipos)
     ctx={
-        "user_dict": usuario
+        'equipos' : equipos
+       # 'user_dict': usuario
     }
     return render(request, template_name, ctx)
+def login(request):
+    return render(request,"login.html",{})    
  

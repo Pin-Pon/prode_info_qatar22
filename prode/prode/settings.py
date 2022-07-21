@@ -75,18 +75,16 @@ WSGI_APPLICATION = 'prode.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # settings.py
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "mssql",
-#         "NAME": "prode",
-#         "USER": "DESKTOP-PGT33l1\HP",
-#         "PASSWORD": "",
-#         "HOST": "HOST_ADDRESS",
-#         "PORT": "5432",
-#         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
-#         },
-#     },
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "prode",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "localhost",
+        "PORT": "5432",
+    },
+}
 
 
 

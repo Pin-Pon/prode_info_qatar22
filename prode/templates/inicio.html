@@ -54,8 +54,19 @@
 
 
 
-    <h1>Bienvenidos el mejor sitio de apuestas</h1>
-    <h3>Hola {{user_dict.nombre}},como estas?</h3>
+     <h1>Bienvenidos el mejor sitio de apuestas</h1>
+     <h3>Hola {{user_dict.nombre}},como estas?</h3>
+    Equipos participantes:
+    {% for e in equipos %}
+       <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{e.nombre}}</h5
+            </div>
+       </div>
+    {% endfor %}
+
+
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
