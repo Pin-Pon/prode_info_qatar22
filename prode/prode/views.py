@@ -10,10 +10,10 @@ def inicio(request):
         "apellido":"HIDAlGO"
     }
     equipos =Equipo.objects.all()
-    print(equipos)
+    print(equipos,usuario)
     ctx={
-        'equipos' : equipos
-       # 'user_dict': usuario
+        'equipos' : equipos,
+        'user_dict': usuario
     }
     return render(request, template_name, ctx)
 def login(request):
