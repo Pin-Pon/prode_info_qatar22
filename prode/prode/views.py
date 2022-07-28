@@ -9,8 +9,10 @@ def inicio(request):
         "nombre":"TAMARA",
         "apellido":"HIDAlGO"
     }
-    equipos =Equipo.objects.all()
+    equipos =Equipo.objects.all() # query > Consultas mediante orm
+    print("*************************")
     print(equipos,usuario)
+    print("*************************")
     ctx={
         'equipos' : equipos,
         'user_dict': usuario
