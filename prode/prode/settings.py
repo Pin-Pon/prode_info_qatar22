@@ -1,5 +1,6 @@
 import os 
 from pathlib import Path
+#from syslog import LOG_UPTO
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +17,9 @@ SECRET_KEY = 'django-insecure-_i)!2=mqmk(+j5a&i9jl!(kdh7=2o-c+x(v%(4wtr)z_457j%m
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL = 'usurios.Usuario'
+LOGIN_REDIRECT_URL = '/mis-grupos'
+LOGOUT_REDIRECT_URL ='/iniciar-sesion/'
 
 # Application definition
 
@@ -27,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'equipos'
+    'equipos',
+    'usurios'
 ]
 
 MIDDLEWARE = [
@@ -68,7 +72,7 @@ WSGI_APPLICATION = 'prode.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "prode",
+        "NAME": "prode_new",
         "USER": "postgres",
         "PASSWORD": "postgres",
         "HOST": "localhost",
